@@ -1,0 +1,26 @@
+ul{list-style: none;}
+a{text-decoration: none;}
+#tour{background: url("../images/tour_bg.jpg") no-repeat center;background-size: cover;}
+.scroll{height:100%}
+#enter{display:block;width:45%;height:50px;line-height:46px;border:1px solid #fff;color:#fff;border-radius: 50px;text-align: center;text-decoration:none;font-size:25px;position: absolute;bottom:13%;left:50%;margin-left:-22.5%;font-family:arial;}
+.left_side_x img{width:22px;margin:24px 0 0 24px;}
+.side_nav{margin:66px 0 0 51px;}
+.side_nav li{padding-bottom:42px;}
+.side_nav a{color:#2d2d2d;font-size:18px;font-weight: bold;}
+.side_nav a span{display:inline-block;background: #2d2d2d;padding:0 6px;height:20px;border-radius: 20px;color:#fff;text-align: center;margin-left:7px;font-size:13px;font-weight: normal;}
+.top{height:9%;text-align: center;font-size: 30px;line-height: 80px;}
+.col img{width:100%;}
+.fav_list{position: relative;}
+.fav_list .fav_time{position:absolute;right:10px;top:8px;color:#c0c0c0;font-size:12px;font-weight: lighter;}
+.fav_btn_box{text-align: center;width:100%;background: #f2f2f2;padding:20px 0 20px 0;}
+.fav_btn_box .fav_btn{width:40%;height:40px;line-height:38px;border:none;color:#7c7c7c;font-size:95%;font-weight:normal;border-radius: 40px;background: #e8e8e8;white-space: nowrap;}
+span.input-label{font-size: 12px;padding-left:7px}
+.totalPrice{color:#777;height:58px;}
+.totalPrice h4{font-size: 12px;line-height:44px;padding-left:18px;float:left;}
+.totalPrice p{float:right;line-height:62px;padding-right:18px;font-size: 15px;font-weight: bold;}
+.order_btn_box{text-align: center;margin-top:14px;height:70px;border:none}
+.order_btn{width:90%;height:40px;line-height:38px;border:none;color:#937f6b;font-size:100%;font-weight:600;border-radius: 40px;background: #efdecc;white-space: nowrap;}
+ion-slide img{width:100%;}
+ion-side-menu-content{position:relative}
+.cart_count{display: block;position:absolute;right:1px;top:3px;padding:0 5px;height:15px;line-height:16px;border-radius: 15px;font-size:12px;background: yellow;z-index: 100}
+.cart_count i{display:block;position:absolute;left:-7px;bottom:-3px;border:5px solid transparent;width:0;height:0;border-right-color: yellow;transform: rotate(-30deg);}

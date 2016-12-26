@@ -1,0 +1,43 @@
+<ion-view>
+    <ion-nav-title>
+        <div style="margin:0 auto;font-size:22px;line-height:44px;">
+            {{details.cata}}
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ui-sref="cart">
+            <i class="icon ion-ios-cart-outline dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content style="background: #f2f2f2;text-align: center;">
+        <div>
+            <ion-slide-box does-continue="true" auto-play="true" slide-interval="1500">
+                <ion-slide>
+                    <div class="box" style="min-height:200px;background: #fff;">
+                        <img src="{{details.imgsrc}}_b.jpg" style="width:100%;">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box" style="min-height:200px;background: #fff;">
+                        <img src="{{details.imgsrc}}_b.jpg" style="width:100%;">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box" style="min-height:200px;background: #fff;">
+                        <img src="{{details.imgsrc}}_b.jpg" style="width:100%;">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box" style="min-height:200px;background: #fff;">
+                        <img src="{{details.imgsrc}}_b.jpg" style="width:100%;">
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+            <p style="background: #fff;padding:20px 0;margin:0;font-size:18px;line-height:30px;">{{details.name}}</p>
+            <p style="background: #fff;color:red;font-size: 20px;font-weight:bold;padding-bottom:30px;">{{details.price}}</p>
+            <div class="fav_btn_box">
+                <button class="fav_btn">Add to Favorites</button>　<button class="fav_btn" style="background: #fff" ng-click="add(details)">Add to Cart</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

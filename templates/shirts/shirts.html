@@ -1,0 +1,41 @@
+<ion-view hide-back-button="true">
+    <ion-nav-title>
+        <div style="margin:0 auto;font-size:22px;line-height:44px;">
+            Shirts
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side=left">
+        <button class="button button-clear" ui-sref="home">
+            <i class="icon ion-android-arrow-back dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ui-sref="cart">
+            <i class="icon ion-ios-cart-outline dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content style="background: #f2f2f2;">
+        <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000">
+            <ion-slide>
+                <div class="box">
+                    <img src="images/shirts/shirts_banner01.jpg" alt="">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="images/shirts/shirts_banner02.jpg" alt="">
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+        <ion-list>
+            <div ng-repeat="product in data.shirts track by $index" class="row" ng-if="$index % 2 == 0">
+                <ion-item class="col-50" ng-repeat="i in [$index,$index + 1]" ng-if="data.shirts[i] != null" ng-click="toDetail('shirts',data.shirts[i].imgsrc,data.shirts[i].title,data.shirts[i].price)">
+                    <img ng-src="{{data.shirts[i].imgsrc}}.jpg">
+                    <h3>{{data.shirts[i].title}}</h3>
+                    <p>{{data.shirts[i].price}}</p>
+                </ion-item>
+            </div>
+            <div style="text-align: center">—The End—</div>
+        </ion-list>
+    </ion-content>
+</ion-view>

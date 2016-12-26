@@ -1,0 +1,30 @@
+<ion-view hide-back-button="true">
+    <ion-nav-title>
+        <div style="margin:0 auto;font-size:22px;line-height:44px;">
+            Bags
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side=left">
+        <button class="button button-clear" ui-sref="home">
+            <i class="icon ion-android-arrow-back dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ui-sref="cart">
+            <i class="icon ion-ios-cart-outline dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content style="background: #f2f2f2;">
+        <div><img src="images/bags/bags_banner.jpg" style="width:100%"></div>
+        <ion-list>
+            <div ng-repeat="product in data.bags track by $index" class="row" ng-if="$index % 2 == 0">
+                <ion-item class="col-50" ng-repeat="i in [$index,$index + 1]" ng-if="data.bags[i] != null" ng-click="toDetail('bags',data.bags[i].imgsrc,data.bags[i].title,data.bags[i].price)">
+                    <img ng-src="{{data.bags[i].imgsrc}}.jpg">
+                    <h3>{{data.bags[i].title}}</h3>
+                    <p>{{data.bags[i].price}}</p>
+                </ion-item>
+            </div>
+            <div style="text-align: center">—The End—</div>
+        </ion-list>
+    </ion-content>
+</ion-view>

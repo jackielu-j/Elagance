@@ -1,0 +1,26 @@
+<ion-view>
+    <ion-nav-title>
+        <div style="margin:0 auto;font-size:22px;line-height:44px;">
+            Cart
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear">
+            <i class="icon ion-ios-cart-outline dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content style="background: #f2f2f2;">
+        <ion-list>
+            <ion-item class="item-thumbnail-left fav_list" style="background: #f2f2f2" ng-repeat="item in cart">
+                <img ng-src="{{item.product.imgsrc}}.jpg">
+                <h3>{{item.product.price}}</h3>
+                <p>{{item.product.name}}</p>
+                <p>Num: {{item.number}}</p>
+                <div class="fav_time">Dec 12.13.2016</div>
+            </ion-item>
+        </ion-list>
+        <div class="fav_btn_box">
+            <button class="fav_btn" ng-click="clearCart()">Clear Cart</button>　<button class="fav_btn" style="background: #fff" ui-sref="checkout">Checkout</button>
+        </div>
+    </ion-content>
+</ion-view>

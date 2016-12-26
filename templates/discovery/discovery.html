@@ -1,0 +1,63 @@
+<ion-view hide-back-button="true">
+    <ion-nav-title>
+        <div style="margin:0 auto;font-size:22px;line-height:44px;">
+            Discovery
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side=left">
+        <button class="button button-clear" ui-sref="home">
+            <i class="icon ion-android-arrow-back dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear">
+            <i class="icon ion-share dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content style="background: #000;color:#fff;">
+        <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000">
+            <ion-slide>
+                <div class="box">
+                    <img src="images/disc01.jpg">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="images/disc02.jpg">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="images/disc03.jpg">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="images/disc04.jpg">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="images/disc05.jpg">
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+
+        <ion-list ng-controller="productsCtrl">
+            <ion-item style="padding:0;text-align:center;margin-bottom:8px;border:none" ng-repeat="imgsrc in data.discovery">
+                <div>
+                    <img ng-src="{{imgsrc}}" style="width:100%">
+                </div>
+                <div class="dark-bg" style="height:50px;line-height:40px;color:#fff">
+                    <button class="button button-clear" style="color:#fff">
+                        <i class="icon ion-happy-outline"></i>
+                    </button>
+                    |
+                    <button class="button button-clear" style="color:#fff">
+                        <i class="icon ion-sad-outline"></i>
+                    </button>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view hide-back-button="true">
+    <ion-nav-title>
+        <div style="margin:0 auto;font-size:22px;line-height:44px;">
+            Jeans
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side=left">
+        <button class="button button-clear" ui-sref="home">
+            <i class="icon ion-android-arrow-back dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ui-sref="cart">
+            <i class="icon ion-ios-cart-outline dark"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content style="background: #f2f2f2;">
+        <div><img src="images/jeans/jeans_banner.jpg" style="width:100%"></div>
+        <ion-list>
+            <div ng-repeat="product in data.jeans track by $index" class="row" ng-if="$index % 2 == 0">
+                <ion-item class="col-50" ng-repeat="i in [$index,$index + 1]" ng-if="data.jeans[i] != null" ng-click="toDetail('jeans',data.jeans[i].imgsrc,data.jeans[i].title,data.jeans[i].price)">
+                    <img ng-src="{{data.jeans[i].imgsrc}}.jpg">
+                    <h3>{{data.jeans[i].title}}</h3>
+                    <p>{{data.jeans[i].price}}</p>
+                </ion-item>
+            </div>
+            <div style="text-align: center">—The End—</div>
+            <!--无限滚动:如果所有的页面都加载完了(例如，共30页)，则不再出现此组件-->
+            <ion-infinite-scroll on-infinite="getRestaurants()" ng-if="page<total" immediate-check="false"></ion-infinite-scroll>
+        </ion-list>
+    </ion-content>
+</ion-view>
